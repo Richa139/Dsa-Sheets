@@ -1,4 +1,4 @@
-//1st method
+//1st method(linear comparisons)
 #include<iostream>
 #include<cstring>
 #include<vector>
@@ -34,7 +34,7 @@ int main()
 
 
 
-//2nd method (best)
+//2nd method (best)(comaparisons in pairs)
 #include<iostream>
 #include<cstring>
 #include<vector>
