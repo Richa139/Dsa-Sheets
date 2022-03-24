@@ -1,3 +1,4 @@
+// 1st method by inbuilt sort
 #include<iostream>
 #include<cstring>
 #include<vector>
@@ -20,5 +21,10 @@ int main()
         cout<<arr[i]<<" ";
     }
     cout<<arr[k-1];
-    
 }
+// Time Complexity
+// Best Case – O(N log N)
+// Average Case- O(N log N)
+// Worse Case- O(N log N)
+
+// space complexity:O(n);
