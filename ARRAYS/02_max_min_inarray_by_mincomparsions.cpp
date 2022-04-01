@@ -48,45 +48,46 @@ int main()
 #endif
     int n;
     cin>>n;
-    int arr[n];
+    int arr[1000];
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
     int i=0;
-    int max_element=arr[0];
-    int min_element=arr[0];
+    int max_element;
+    int min_element;
     if(n%2!=0){
      max_element=arr[0];
      min_element=arr[0];
     i=1;
     }
-else{
-   if(arr[i]>arr[i+1]){
-    max_element=arr[i];
-    min_element=arr[i+1];
+   else{
+   if(arr[0]>arr[1]){
+    max_element=arr[0];
+    min_element=arr[1];
    }
    else{
-    min_element=arr[i+1];
-    max_element=arr[i];
+    min_element=arr[0];
+    max_element=arr[1];
    }
    i=2;
 }
-while(i<n){
+while(i<n-1){
     if(arr[i]>arr[i+1]){
         if(arr[i]>max_element){
             max_element=arr[i];
         }
-        if(arr[i]<min_element){
+        if(arr[i+1]<min_element){
             min_element=arr[i+1];
         }
     }
     else{
+        if(arr[i+1]>max_element){
+        max_element=arr[i+1];
+       }
         if(arr[i]<min_element){
         min_element=arr[i];
        }
-       if(arr[i]>max_element){
-        max_element=arr[i+1];
-       }
+       
     }
     i+=2;
 }
