@@ -107,7 +107,28 @@ return v1;
 
 
 // For unsorted array
-// 1st method -sets
+int doUnion(int a[], int n, int b[], int m)  {
+        //code here
+        int k=0;
+        int arr[n+m];
+        for(int i=0;i<n;i++){
+            arr[k]=a[i];
+            k++;
+        }
+        for(int j=0;j<m;j++){
+            arr[k]=b[j];
+            k++;
+        }
+        sort(arr,arr+n+m);
+        int count=0;
+        for(int i=0;i<k;i++){
+            if(i<k-1 && arr[i]==arr[i+1]){
+                count++;
+            }
+        }
+        return k-count;
+    }
+// -sets
 int doUnion(int a[], int n, int b[], int m)  {
         //code here
           set<int>s;
@@ -121,7 +142,7 @@ int doUnion(int a[], int n, int b[], int m)  {
     }
 // time complexity=O(n+m(log(m+n))
                   
-// 2nd method-maps
+// -maps
 int doUnion(int a[], int n, int b[], int m)  {
         map<int,int>mp;
         for(int i=0;i<n;i++){
