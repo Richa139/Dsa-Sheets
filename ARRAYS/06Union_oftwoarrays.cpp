@@ -104,3 +104,32 @@ for(int i=1;i<v.size();i++){
 
 return v1;
     }
+
+
+// For unsorted array
+// 1st method -sets
+int doUnion(int a[], int n, int b[], int m)  {
+        //code here
+          set<int>s;
+          for(int i=0;i<n;i++){
+              s.insert(a[i]);
+          }
+           for(int i=0;i<m;i++){
+              s.insert(b[i]);
+          }
+          return s.size();
+    }
+// time complexity=O(n+m(log(m+n))
+                  
+// 2nd method-maps
+int doUnion(int a[], int n, int b[], int m)  {
+        map<int,int>mp;
+        for(int i=0;i<n;i++){
+            mp.insert({a[i],i});
+        }
+        for(int i=0;i<m;i++){
+            mp.insert({b[i],i});
+        }
+        return mp.size();
+    }
+// time complexity=O(n+m)
