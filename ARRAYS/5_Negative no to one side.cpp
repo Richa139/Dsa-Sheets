@@ -35,3 +35,5 @@ int main()
  	cout<<a[i]<<" ";
  }   
 }
+Time complexity:O(N);
+Space Complexity:O(1);
