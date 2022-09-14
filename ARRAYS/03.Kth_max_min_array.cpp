@@ -56,3 +56,5 @@ class Solution{
 };
 // The time complexity for this approach is - O(n+logn)
 // The space complexity for this approach will be - O(n).
+
+// Creating a heap takes O(n) time while inserting into a heap (or priority queue) takes O(log(n)) time.
