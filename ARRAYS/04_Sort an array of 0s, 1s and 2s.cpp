@@ -17,3 +17,5 @@ void sort012(int arr[], int n)
         }  
      }
     }
+// Expected Time Complexity: O(N)
+// Expected Auxiliary Space: O(1)
